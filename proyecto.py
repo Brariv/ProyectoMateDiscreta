@@ -55,26 +55,26 @@ def main():
             if operacion == 1:
                 print("Complemento")
                 while True: #Validar si el Conjunto Existe
-                    conjunto = input("Ingrese el conjunto a operar: ")
-                    if conjunto in conjuntos:
+                    conjunto1 = input("Ingrese el conjunto a operar: ").lower()
+                    if conjunto1 in conjuntos:
                         break
                     else:
                         print("Conjunto no existe")
                         continue
-                print("Conjunto", conjunto, ":", conjuntos[conjunto])
-                print("Complemento:", complemento(conjuntos["Universo"], conjuntos[conjunto])) #Mostrar Complemento
+                print("Conjunto", conjunto1, ":", conjuntos[conjunto1])
+                print("Complemento:", complemento(conjuntos["Universo"], conjuntos[conjunto1])) #Mostrar Complemento
 
             elif operacion == 2:
                 print("Unión")
                 while True:#Validar si el Conjunto Existe
-                    conjunto1 = input("Ingrese el primer conjunto a operar: ")
+                    conjunto1 = input("Ingrese el primer conjunto a operar: ").lower()
                     if conjunto1 in conjuntos:
                         break
                     else:
                         print("Conjunto no existe")
                         continue
                 while True:#Validar si el Conjunto Existe
-                    conjunto2 = input("Ingrese el segundo conjunto a operar: ")
+                    conjunto2 = input("Ingrese el segundo conjunto a operar: ").lower()
                     if conjunto2 in conjuntos:
                         break
                     else:
@@ -87,14 +87,14 @@ def main():
             elif operacion == 3:
                 print("Intersección")
                 while True:#Validar si el Conjunto Existe
-                    conjunto1 = input("Ingrese el primer conjunto a operar: ")
+                    conjunto1 = input("Ingrese el primer conjunto a operar: ").lower()
                     if conjunto1 in conjuntos:
                         break
                     else:
                         print("Conjunto no existe")
                         continue
                 while True:#Validar si el Conjunto Existe
-                    conjunto2 = input("Ingrese el segundo conjunto a operar: ")
+                    conjunto2 = input("Ingrese el segundo conjunto a operar: ").lower()
                     if conjunto2 in conjuntos:
                         break
                     else:
@@ -107,14 +107,14 @@ def main():
             elif operacion == 4:
                 print("Diferencia")
                 while True:#Validar si el Conjunto Existe
-                    conjunto1 = input("Ingrese el primer conjunto a operar: ")
+                    conjunto1 = input("Ingrese el primer conjunto a operar: ").lower()
                     if conjunto1 in conjuntos:
                         break
                     else:
                         print("Conjunto no existe")
                         continue
                 while True:#Validar si el Conjunto Existe
-                    conjunto2 = input("Ingrese el segundo conjunto a operar: ")
+                    conjunto2 = input("Ingrese el segundo conjunto a operar: ").lower()
                     if conjunto2 in conjuntos:
                         break
                     else:
@@ -127,14 +127,14 @@ def main():
             elif operacion == 5:
                 print("Diferencia Simétrica")
                 while True:#Validar si el Conjunto Existe
-                    conjunto1 = input("Ingrese el primer conjunto a operar: ")
+                    conjunto1 = input("Ingrese el primer conjunto a operar: ").lower()
                     if conjunto1 in conjuntos:
                         break
                     else:
                         print("Conjunto no existe")
                         continue
                 while True:#Validar si el Conjunto Existe
-                    conjunto2 = input("Ingrese el segundo conjunto a operar: ")
+                    conjunto2 = input("Ingrese el segundo conjunto a operar: ").lower()
                     if conjunto2 in conjuntos:
                         break
                     else:
@@ -180,7 +180,7 @@ def construir_conjunto(conjunto): #Construir Conjunto
             Conjunto.append(Elemento)
         else:
             print("Elemento Fuera del Universo")
-    return {Nombre: Conjunto}
+    return {Nombre.lower(): Conjunto}
 
     
 def complemento(universo, conjunto):
